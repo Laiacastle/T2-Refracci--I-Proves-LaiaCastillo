@@ -3,6 +3,14 @@ using System.Reflection.Metadata;
 
 class Program
 {
+    public static double CalculateArea(double width, double height)
+    {
+        return width * height;
+    }
+    public static double CalculateCircum(double radius)
+    {
+        return 2 * Math.PI * radius;
+    }
     static void Main(string[] args)
     {
         //Constant afegides
@@ -16,7 +24,7 @@ class Program
             MsgPetit = "L'àrea és menor o igual a 20";
 
         //variables afegides
-        double width, height, radius, area, circumference;
+        double width, height, radius, area;
 
         // Sol·licita l'entrada de l'usuari per calcular l'àrea d'un rectangle
         Console.WriteLine(MsgAmp);
@@ -25,15 +33,15 @@ class Program
         height = Convert.ToDouble(Console.ReadLine());
 
         // Calcula l'àrea
-        area = width * height;
+        area = CalculateArea(width, height);
         Console.WriteLine(MsgArea, area);
 
         // Sol·licita l'entrada de l'usuari per calcular la circumferència d'un cercle
         Console.WriteLine(MsgRadi);
         radius = Convert.ToDouble(Console.ReadLine());
-        circumference = 2 * Math.PI * radius;
+        
 
-        Console.WriteLine(MsgCircum, circumference);
+        Console.WriteLine(MsgCircum, CalculateCircum(radius));
 
         // Imprimeix un missatge basat en el valor de l'àrea
         if (area > 50)
