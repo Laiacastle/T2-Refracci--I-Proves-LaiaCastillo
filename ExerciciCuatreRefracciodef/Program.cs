@@ -13,7 +13,7 @@ class Program
     }
     static void Main(string[] args)
     {
-        //Constant afegides
+        
         const string MsgAmp = "Introdueix l'amplada del rectangle:",
             MsgAlt = "Introdueix l'altura del rectangle:",
             MsgArea = "L'àrea del rectangle és: {0} ",
@@ -23,28 +23,27 @@ class Program
             MsgMig = "L'àrea és entre 20 i 50",
             MsgPetit = "L'àrea és menor o igual a 20";
 
-        //variables afegides
-        double width, height, radius, area, circumference;
+       
+        double width, height, radius, area;
 
-        // Sol·licita l'entrada de l'usuari per calcular l'àrea d'un rectangle
+        // calcular area
+
         Console.WriteLine(MsgAmp);
         width = Convert.ToDouble(Console.ReadLine());
+
         Console.WriteLine(MsgAlt);
         height = Convert.ToDouble(Console.ReadLine());
 
-        // Calcula l'àrea
         area  = CalculateArea(width, height);
         Console.WriteLine(MsgArea, area);
 
-        // Sol·licita l'entrada de l'usuari per calcular la circumferència d'un cercle
+        // calcula la circumferencia d'un cercle
         Console.WriteLine(MsgRadi);
         radius = Convert.ToDouble(Console.ReadLine());
         
-
         Console.WriteLine(MsgCircum, CalculateCircum(radius));
 
-        // Imprimeix un missatge basat en el valor de l'àrea
-        //creada una ternaria
+        // Imprimeix basat en el valor de l'àrea
 
         Console.WriteLine(area > 50 ? MsgGran : area > 20 ? MsgMig : MsgPetit);
         
