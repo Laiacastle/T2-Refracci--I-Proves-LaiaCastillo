@@ -10,6 +10,9 @@
         {
             return 2 * Math.PI * radius;
         }
-
+        public static bool GraterThanZero(double num)
+        {
+            return num > 0;
+        }
     }
 }

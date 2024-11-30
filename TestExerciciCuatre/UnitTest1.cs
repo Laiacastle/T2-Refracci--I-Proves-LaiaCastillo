@@ -5,6 +5,7 @@ namespace TestExerciciCuatre
     [TestClass]
     public class UnitTestExerciciCuatre
     {
+        //CalculateArea
         [TestMethod]
         public void Area20()
         {
@@ -29,6 +30,7 @@ namespace TestExerciciCuatre
             //Assert
             Assert.AreEqual(result, prova);
         }
+        //CalculateCircum
         [TestMethod]
         public void Radius20()
         {
@@ -50,6 +52,26 @@ namespace TestExerciciCuatre
             double result = Utils.CalculateCircum(radius);
             //Assert
             Assert.AreEqual(result, prova);
+        }
+        //GraterThanZero
+        [TestMethod]
+        public void IsNegative()
+        {
+            //Arrange
+            double num = -20;
+            //Act                       
+            bool result = Utils.GraterThanZero(num);
+            //Assert
+            Assert.IsFalse(result);
+        }
+        public void IsPositive()
+        {
+            //Arrange
+            double num = 20;
+            //Act                       
+            bool result = Utils.GraterThanZero(num);
+            //Assert
+            Assert.IsTrue(result);
         }
     }
 }
