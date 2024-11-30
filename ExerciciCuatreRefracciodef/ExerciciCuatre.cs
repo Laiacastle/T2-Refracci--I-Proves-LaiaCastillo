@@ -28,17 +28,27 @@ namespace RefraccioExerciciCuatre
             Console.WriteLine(MsgAmp);
             try
             {
-                width = Convert.ToDouble(Console.ReadLine());
+                do {
+                    width = Convert.ToDouble(Console.ReadLine());
+                } while(!Utils.GraterThanZero(width));
 
                 Console.WriteLine(MsgAlt);
-                height = Convert.ToDouble(Console.ReadLine());
+                do
+                {
+                    height = Convert.ToDouble(Console.ReadLine());
+                }while(!Utils.GraterThanZero(height));
+                
 
                 area  = Utils.CalculateArea(width, height);
                 Console.WriteLine(MsgArea, area);
 
                 // calcula la circumferencia d'un cercle
                 Console.WriteLine(MsgRadi);
-                radius = Convert.ToDouble(Console.ReadLine());
+                do
+                {
+                    radius = Convert.ToDouble(Console.ReadLine());
+                }while(!Utils.GraterThanZero(radius));
+                
         
                 Console.WriteLine(MsgCircum, Utils.CalculateCircum(radius));
 
