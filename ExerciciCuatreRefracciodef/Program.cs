@@ -24,7 +24,7 @@ class Program
             MsgPetit = "L'àrea és menor o igual a 20";
 
         //variables afegides
-        double width, height, radius, area;
+        double width, height, radius, area, circumference;
 
         // Sol·licita l'entrada de l'usuari per calcular l'àrea d'un rectangle
         Console.WriteLine(MsgAmp);
@@ -33,7 +33,7 @@ class Program
         height = Convert.ToDouble(Console.ReadLine());
 
         // Calcula l'àrea
-        area = CalculateArea(width, height);
+        area  = CalculateArea(width, height);
         Console.WriteLine(MsgArea, area);
 
         // Sol·licita l'entrada de l'usuari per calcular la circumferència d'un cercle
@@ -44,17 +44,9 @@ class Program
         Console.WriteLine(MsgCircum, CalculateCircum(radius));
 
         // Imprimeix un missatge basat en el valor de l'àrea
-        if (area > 50)
-        {
-            Console.WriteLine(MsgGran);
-        }
-        else if (area > 20)
-        {
-            Console.WriteLine(MsgMig);
-        }
-        else
-        {
-            Console.WriteLine(MsgPetit);
-        }
+        //creada una ternaria
+
+        Console.WriteLine(area > 50 ? MsgGran : area > 20 ? MsgMig : MsgPetit);
+        
     }
 }
