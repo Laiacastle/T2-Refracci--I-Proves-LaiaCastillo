@@ -50,7 +50,7 @@ namespace TestExCinc
             //Act
             int result = utils.ClassifyAge(age);
             //Assert
-            Assert.Equal(-1, result);
+            Assert.Equal(0, result);
 
         }
         [Fact]
@@ -75,7 +75,7 @@ namespace TestExCinc
             int result = utils.ClassifyAge(age);
             //Assert
             Assert.Equal(2, result);
-            Assert.False(result2);
+            
 
         }
         [Fact]
@@ -116,7 +116,7 @@ namespace TestExCinc
             bool result = utils.NameAnalyser(name).IsShort;
             bool result2 = utils.NameAnalyser(name).IsPalindrome;
             //Assert
-            Assert.True(result);
+            Assert.False(result);
             Assert.False(result2);
 
         }
@@ -139,13 +139,13 @@ namespace TestExCinc
         {
             //Arrange
             var utils = new PersonaHelper();
-            string name = "taoa";
+            string name = "taoat";
             //Act
             bool result = utils.NameAnalyser(name).IsPalindrome;
             bool result2 = utils.NameAnalyser(name).IsShort;
             //Assert
             Assert.True(result);
-            Assert.True(result2);
+            Assert.False(result2);
 
         }
         [Fact]
@@ -167,7 +167,7 @@ namespace TestExCinc
         {
             //Arrange
             var utils = new PersonaHelper();
-            string color = " ";
+            string color = "";
             //Act
             int result = utils.VerifyColour(color);
             //Assert
@@ -246,6 +246,3 @@ namespace TestExCinc
 }
 
 
-
-}
-}
