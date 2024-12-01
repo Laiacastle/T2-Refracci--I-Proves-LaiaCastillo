@@ -1,3 +1,3 @@
 # Index
-## [Exercicis](./T2-Refracció-I-Proves)
-## [Biblografia](./biblografia)
+## [Exercicis](./T2-Refracció-I-Proves.md)
+## [Biblografia](./biblografia.md)
